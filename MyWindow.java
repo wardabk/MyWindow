@@ -13,7 +13,7 @@ public class MyWindow extends JFrame {
         setLocationRelativeTo(null);
 
         // Ajouter une image
-        JLabel imageLabel = new JLabel(new ImageIcon("mac.jpg"));
+        JLabel imageLabel = new JLabel(new ImageIcon("./assets/mac.jpg"));
         add(imageLabel, BorderLayout.CENTER);
 
         // Panel des boutons
@@ -21,7 +21,7 @@ public class MyWindow extends JFrame {
         JButton playButton = new JButton("Play");
         JButton stopButton = new JButton("Stop");
 
-        playButton.addActionListener(e -> playSound("sonnerie.wav"));
+        playButton.addActionListener(e -> playSound("./assets/sonnerie.wav"));
         stopButton.addActionListener(e -> stopSound());
 
         buttonPanel.add(playButton);
@@ -44,4 +44,4 @@ public class MyWindow extends JFrame {
     private void stopSound() {
         if (clip != null) clip.stop();
     }
-}
+} 
